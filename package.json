@@ -37,8 +37,12 @@
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
-      "createDesktopShortcut": true
+      "createDesktopShortcut": true,
+      "artifactName": "Focus-Setup-${version}-win-${arch}.${ext}"
     },
-    "artifactName": "Focus-${version}-${os}-${arch}.${ext}"
+    "artifactName": "Focus-${version}-${os}-${arch}.${ext}",
+    "portable": {
+      "artifactName": "Focus-Portable-${version}-win-${arch}.${ext}"
+    }
   }
 }
