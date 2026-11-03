@@ -1,0 +1,44 @@
+{
+  "name": "focus-growth",
+  "version": "0.48.0",
+  "private": true,
+  "description": "Focus \u2014 gentle time companion",
+  "author": "Focus",
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --publish never",
+    "test": "node --test tests/*.test.cjs"
+  },
+  "devDependencies": {
+    "electron": "42.0.0",
+    "electron-builder": "26.0.12"
+  },
+  "build": {
+    "appId": "studio.growth.focus.crossplatform",
+    "productName": "Focus",
+    "files": [
+      "main.cjs",
+      "preload.cjs",
+      "index.html"
+    ],
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    },
+    "artifactName": "Focus-${version}-${os}-${arch}.${ext}"
+  }
+}
